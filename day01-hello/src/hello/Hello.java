@@ -17,7 +17,7 @@ public class Hello {
 	   //sysout - > ctrl + space bar
 	System.out.println("안녕하세요, 자바!");
 	
-	// 소스 편집 후 저장생활화
+	// 소스 편집 후 저장 생활화
 	}
 
 }
