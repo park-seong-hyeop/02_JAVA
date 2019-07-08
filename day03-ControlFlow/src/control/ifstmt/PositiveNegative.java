@@ -35,8 +35,8 @@ public class PositiveNegative {
 		}else {
 			result = "음수"; 
 		}
-		System.out.printf("입력값 %은(는) %s 입니다.", input,result);
-		System.out.println("입력값" + input + "은(는)" + result + "입니다.");
+		System.out.printf("입력값 %d은(는) %s 입니다.%n", input,result);
+		System.out.println("입력값" + input + "은(는)\n" + result + "입니다.");
 
 	}
 

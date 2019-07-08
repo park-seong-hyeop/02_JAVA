@@ -23,24 +23,24 @@ public class PositiveNegative2 {
 		// 1.선언
 		int input;
 		String result;
-		Scanner scan;
+		Scanner scan;// import 
 		
 		//2.초기화
 		scan = new Scanner(System.in);
-		System.out.println("정수를 입력하세요 단 0 제외");
+		System.out.println("정수를 입력하세요.(단, 0제외)");
 		input = scan.nextInt();
 		//3. 사용
 		if (input > 0) {
 			result = "양수";
-		}else if (input < 0){
+		} else if (input < 0){
 			result = "음수"; 
-		}else {
-		 result = "0";
+		} else {
+			result = "0";
 		}
-		}
+		
 
-		System.out.printf("입력값 %d 은(는) %s 입니다.%n", input,result);
-		System.out.println("입력값" + input + "은(는)" + result + "입니다.");
+	    System.out.printf("입력 값 %d 은(는) %s 입니다.%n", input, result);
+	    System.out.println("입력 값 " + input + " 은(는)\n " + result + " 입니다.");
 
 	}
 
