@@ -1,5 +1,7 @@
 package operator.binary;
 
+import java.util.Scanner;
+
 /**
  * &&, || : 논리연산 AND, OR 연산자
  * -------------------------------

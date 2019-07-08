@@ -31,7 +31,7 @@ public class ByreTest {
 		System.out.println("buffer=" + buffer);
 		
 		// 6. 값의 범위를 벗어나는 값을 저장하려고 시도
-		buffer = 128; // 
+		buffer = 129; // 
 		
 
 	}
