@@ -47,8 +47,9 @@ public class MultipleOfTwo {
 		System.out.printf("입력값 %d (은)는 2의 %s%n", input, result);
 		// (2) ---------------------------------------------
 		System.out.println("===== (2) =====");
-		mod = input % 2;
+		mod = input % 2; 
 		if (input % 2 == 0) { 
+			// "input % 2 == 0" 여기에 연산자가 2개 들어가있음  : %, ==
 			// 위의 () 안의 연산은 연산자 우선순위에 의해 
 			// input % 2 의 연산이 먼저 수행되고 난뒤
 			// 그 결과가 0과 같은지 == 연산산이 수행됩니다.
