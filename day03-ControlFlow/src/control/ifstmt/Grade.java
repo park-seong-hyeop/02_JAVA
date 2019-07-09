@@ -24,24 +24,25 @@ public class Grade {
 		int score;
 		char grade;
 		Scanner scan;
-		// 2.초기화
+		//2.초기화
 		scan = new Scanner(System.in);
-		System.out.println("0~100 사이의 점수를 입력.");
+		// 입력 알림 promt
+		System.out.println("0 ~ 100점 사이의 점수를 입력하세요.");
 		score = scan.nextInt();
-		// 3.사용
-		 if (score >= 90) {
+		//3.사용 : score에 입력된 값을 판단
+		if (score >= 90) {
 			grade = 'A';
 		} else if (score >= 80) {
-			grade = 'B'; 
+			grade = 'B';
 		} else if (score >= 60) {
-			grade = 'C'; 
+			grade = 'C';
 		} else if (score >= 40) {
-			grade = 'D'; 
-		}else {	 
+			grade = 'D';
+		} else {
 			grade = 'F';
 		}
-		 System.out.printf("입력하신 %d점은 %c 학점 입니다.%n", score, grade );
-
+		// 출력
+		System.out.printf("%d점에 해당하는 학점은 %c%n", score, grade);
 	}
 
 }

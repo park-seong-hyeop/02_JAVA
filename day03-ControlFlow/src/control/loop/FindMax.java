@@ -17,20 +17,19 @@ public class FindMax {
 		int input;
 		int max;
 		Scanner scan = new Scanner(System.in);
-		
 		// 2.초기화
 		max = 0;
-		
-		// 3. 입력값으로 부터 max를 반복 설정
+		// 3.입력값으로 부터 max를 반복 설정
 		do {
-			System.out.println("양수를 입력하세요(끝내려면 0입력)");
+			System.out.println("양수를 입력(끝내려면 0입력)");
 			input = scan.nextInt();
 			
 			if (input > max) {
 				max = input;
 			}
-		}while (input > 0);
-	System.out.printf("최대값은 %d 입니다.%n", max);
+		} while (input > 0);
+		System.out.printf("최댓값은 %d 입니다.%n", max);
+	
 	}
 
 }
