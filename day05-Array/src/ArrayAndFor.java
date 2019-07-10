@@ -12,19 +12,21 @@ public class ArrayAndFor {
  * @param args
  */
 	public static void main(String[] args) {
+		// 1. 선언
+		int[] number;
+		int summery;
 		
-		for (int idx = 0; idx < salaries.length; idx++) {
-			System.out.printf("salaries[%d]=%d%n",idx , salaries[idx]);		
+		// 2. 초기화
+		number = new int[10];
+		
+		//3. 값 저장
+		for (int idx = 0; idx < numbers.length; idx++) {
+			numbers[idx] = (idx + 1) * 10;
+			summery += number[idx];
 		}
-		System.out.println("==for loop 로 입력==");
-		Scanner scan = new Scanner(System.in);
-		for (int idx = 0; idx < salaries.length; idx++) {
-			System.out.prinln("정수를 입력하세요");
-			salaries[idx] = scan.nextInt();
-			
-			System.out.printf("salaries[%d]=%d%n", idx, salaries[idx]);
-			
-		}
+		// 4. 합산 출력
+		System.out.printf("원소의 합 : %d%n", summary);
+		
 
 	}
 
