@@ -47,3 +47,8 @@ public class CalcBMI {
 	}
 
 }
+
+
+
+for (int idx = 0; idx < salaries.length; idx++) {
+	System.out.printf("salaries[%d]=%d%n",idx , salaries[idx]);		
