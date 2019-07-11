@@ -22,12 +22,32 @@ public class ForTest {
 	public static void main(String[] args) {
 		// 문제1)
 		// continue 없이
-		for (int idx = 50; idx > 0; idx--) {
-			System.out.printf("idx=%2d%n", idx);
+		for (int idx = 50; idx >= 0; idx--) {
+			if (idx % 2 != 0) 
+				;
+			else 
+				System.out.printf("%d%n", idx);
 		}
 		// comtinue 사용
-		for ()
-
+		for (int idx = 50; idx >= 0; idx--) {
+			if (idx % 2 != 0) continue;
+			System.out.printf("%d%n", idx);
 		}
-
+		System.out.println("=================================");		
+		// 2. 제곱표 출력
+		for (int square = 1; square <= 10; square++) {
+			System.out.printf("%2d x %2d = %3d%n", square, square, square * square);
+		}
+		
+		// 3. 제곱표 출력(배열, foreach 사용)
+		int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		
+		for (int num: numbers) {
+			System.out.printf("%2d x %2d = %3d%n"
+					        , num, num, num * num);
+		}
+		
+		
 	}
+
+}

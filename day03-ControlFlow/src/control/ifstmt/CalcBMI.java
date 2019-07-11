@@ -43,12 +43,11 @@ public class CalcBMI {
 		}
 		
 		System.out.printf("몸무게 %.2fkg, 키 %.2fcm, bmi는 %.2f 당신은 %s 입니다.", weight, height, bmi, result);
-	
+		System.out.println();
 	}
 
 }
 
 
 
-for (int idx = 0; idx < salaries.length; idx++) {
-	System.out.printf("salaries[%d]=%d%n",idx , salaries[idx]);		
+	
