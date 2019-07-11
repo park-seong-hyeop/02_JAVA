@@ -30,7 +30,7 @@ public class ArrayAndFor {
 					numbers[idx] = (idx + 1) * 10;
 					summery += numbers[idx]; 
 				}
-				
+//				summery = summery + numbers[idx];
 				// 4. 합산 출력
 				System.out.printf("원소의 합 : %d%n", summery);
 				

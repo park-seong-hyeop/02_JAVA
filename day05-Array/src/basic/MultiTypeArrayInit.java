@@ -45,6 +45,7 @@ public class MultiTypeArrayInit {
 					System.out.printf("name=%s%n", name);
 				}
 				
+				System.out.println("(5) char 배열 출력");
 				for (char alpha: alphabets) {
 					System.out.printf("alpha=%c%n", alpha);
 				}

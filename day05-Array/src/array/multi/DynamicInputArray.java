@@ -45,6 +45,7 @@ public class DynamicInputArray {
 			}
 		}
 		
+	
 		for (int[] numbers: numbers2d) {
 			for (int num: numbers) {
 				System.out.printf("%d\t", num);
