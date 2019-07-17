@@ -67,7 +67,7 @@ public class Eraser {
 	 */
 	Eraser(double width) {
 		// 57 줄의 기본 생성자 호출 
-		//    : 매개변수가 비어있는 this() 이므로
+		//    : 매개변 수가 비어있는 this() 이므로
 		this();
 		// width 필드는 매개변수로 넘겨진 값으로 초기화
 		this.width = width;
