@@ -1,4 +1,5 @@
 package snack;
+
 /**
  * Oreo 쿠키가 3개 들어있는 oreoBox 라는 변수를
  * Oreo 배열타입으로 선언하고
@@ -17,5 +18,33 @@ package snack;
  *
  */
 public class OreoTest {
+
+	public static void main(String[] args) {
+		// 1. 선언, 2. 초기화
+		Oreo[] oreoBox = new Oreo[3];
+		
+		oreoBox[0] = new Oreo("초코");
+		oreoBox[1] = new Oreo("딸기");
+		oreoBox[2] = new Oreo("말차");
+
+		// 3. 사용
+		// (1) 생성 직후 상태 출력
+		for (Oreo oreo: oreoBox) {
+			oreo.print();
+		}
+		
+		// (2) 모두 바닐라 크림을 변경
+		for (int idx = 0; idx < oreoBox.length; idx++) {
+			oreoBox[idx].changeCream("바닐라");
+		}
+		
+		System.out.println("===========================");
+		
+		// (3) 바닐라 크림 변경 후 출력
+		for (Oreo oreo: oreoBox) {
+			oreo.print();
+		}
+		
+	}
 
 }
