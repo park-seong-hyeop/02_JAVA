@@ -79,6 +79,21 @@ public class Book {
 		this.title = title;
 	}
 	
+	
+	
+	public Book(int sequence, String isbn, String title, String author, String company, int totalPage, int price,
+			int quantity) {
+		super();
+		this.sequence = sequence;
+		this.isbn = isbn;
+		this.title = title;
+		this.author = author;
+		this.company = company;
+		this.totalPage = totalPage;
+		this.price = price;
+		this.quantity = quantity;
+	}
+
 	// sequence 멤버 변수의 getter
 	public int getSequence() {
 		return sequence;
@@ -146,9 +161,25 @@ public class Book {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	public void print() {
+		String message = "책 정보[일련번호:%d, ISBN:%s"
+				             + ", 제목:%s, 저자:%s"
+				             + ", 출판사:%s, 페이지:%d"
+				             + ", 가격:%d, 재고:%d]%n";
+		
+		System.out.printf(message, sequence, isbn
+						, title, author, company
+						, totalPage, price, quantity);
+		
+	}
 	
 	
 }
+
+
+
+
 
 
 
