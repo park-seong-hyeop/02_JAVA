@@ -9,7 +9,7 @@ package snack;
  */
 public class OreoBox {
 
- // TODO Oreo 를 여러개 저장할 수 있는
+ // Oreo 를 여러개 저장할 수 있는
  // Oreo[] oreos 를 멤버 변수로 갖도록 선언
  Oreo[] oreos;
 
@@ -23,7 +23,7 @@ public class OreoBox {
   this.oreos = oreos;
  }
 
- // TODO 오레오 박스에
+ // 오레오 박스에
  // 오레오 쿠키를 1개씩 추가, 삭제, 수정, 꺼내(get)거나
  public void add(Oreo oreo) {
   Oreo[] newOreos;
@@ -59,7 +59,6 @@ public class OreoBox {
  }
 
  public void set(Oreo oreo) {
-  // 수정할 오레오 위치 찾기
   int index = findOreoIndex(oreo);
   if (index > -1) {
    oreos[index] = oreo;
@@ -68,16 +67,13 @@ public class OreoBox {
  }
 
  public Oreo get(Oreo oreo) {
-  // 오레오 하나 얻기
   return findOreo(oreo);
  }
 
  public Oreo[] getAllOreos() {
-  // 안에 있는 오레오를 전부 리턴
   return this.oreos;
  }
 
- // 오레오를 찾는 메소드
  private Oreo findOreo(Oreo oreo) {
   Oreo findOreo = null;
   for (int idx = 0; idx < oreos.length; idx++) {
@@ -90,8 +86,7 @@ public class OreoBox {
  }
 
  private int findOreoIndex(Oreo oreo) {
-  // oreo과 같은녀석을 찾을 수 있는 위치를 알려주는 메소드
-  int index = -1; // 배열이 0번부터 시작하기 때문에 -1로 초기화
+  int index = -1; 
   Oreo findOreo = null;
   for (int idx = 0; idx < oreos.length; idx++) {
    if (oreos[idx].getSequence() == oreo.getSequence()) {
