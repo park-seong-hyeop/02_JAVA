@@ -10,21 +10,21 @@ public class StringArrayLinitList {
 
 	public static void main(String[] args) {
 		// 1. 선언, 2. 초기화
-				String[] students = 
-					{"정하은", "최현정", "김지후", "정현수"};
-				
-				// 3. 출력 (foreach)
-				for (String name: students) {
-					System.out.println("학생의 이름=" + name);
-				}
-				
-				// 3. 출력 (for)
-				for (int idx = 0; idx < students.length; idx++) {
-					System.out.printf("students[%d]=%s%n"
-							, idx, students[idx]);
-				}
-			}
-
+		String[] students = 
+			{"정하은", "최현정", "김지후", "정현수"};
+		
+		// 3. 출력 (foreach)
+		for (String name: students) {
+			System.out.println("학생의 이름=" + name);
 		}
+		
+		// 3. 출력 (for)
+		for (int idx = 0; idx < students.length; idx++) {
+			System.out.printf("students[%d]=%s%n"
+					, idx, students[idx]);
+		}
+	}
+
+}
 
 

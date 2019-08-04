@@ -11,10 +11,10 @@ public class IntTest {
 
 	public static void main(String[] args) {
 		// 1. 선언, 2. 초기화
-		// 선언할때, 한줄에 변수를  (,)콤마로 나열하여 
+		// 선언할 때, 한 줄에 변수를 콤마(,)로 나열하여 
 		// 여러개 선언 가능
-		// 이때 타입은 맨앞에 한번만 하면 된다.
-		int num1 = 5 , num2 = 28;
+		// 이 때, 타입은 맨 앞에 한번만 선언하면 된다.
+		int num1 = 5, num2 = 28;
 		int num3, num4, num5;
 		
 		int num6;
@@ -27,11 +27,11 @@ public class IntTest {
 		num4 = num2 / num1; // 나눗셈 몫
 		num5 = 25 / num1;   // 나눗셈 몫
 		
-		// 3. 사용
-		System.out.println("5 * 28=" + num3);
-		System.out.println("28 / 5=" + num4);
-		System.out.println("25 / 5=" + num5);
-  
+		// 3. 사용 : 변수 값 출력
+		System.out.println("5 * 28 = " + num3);
+		System.out.println("28 / 5 = " + num4);
+		System.out.println("25 / 5 = " + num5);
 	}
 
 }
+

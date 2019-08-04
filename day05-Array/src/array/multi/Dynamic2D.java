@@ -33,14 +33,15 @@ public class Dynamic2D {
 				for (int[] array: twoDArray) {
 					System.out.println("array=" + array);
 				}
-				
+				System.out.println("==================");
 				// 3. 1 ~ 13 까지 데이터 저장 (for)
 				for (int idx = 0; idx < twoDArray.length; idx++) {
 					for (int ind = 0; ind < twoDArray[idx].length; ind++) {
 						twoDArray[idx][ind] = ++count;
 					}
 				}
-				
+				System.out.println("==================");
+	
 				// 4. 출력(foreach)
 				for (int[] array: twoDArray) {
 					for (int num: array) {

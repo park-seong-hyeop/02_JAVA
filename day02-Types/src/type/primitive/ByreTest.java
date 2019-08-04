@@ -1,26 +1,28 @@
 package type.primitive;
+
 /**
- * bite : 1bite에 해당하는 범위만큼
- *        정수를 저장하느 타입
- * --------------------------------------
- * 8bit = 2의 제곱
+ * byte : 1byte(8bit) 에 해당하는 범위만큼
+ *        정수를 저장하는 타입
+ * ---------------------------------------
+ * 8bit = 2의 8제곱
  *      = 256
- *      = 256개의 숫자를 표현 가능
- *      = -128 ~ 0 ~ 127 까지 표현 가능
- * -----------------------------------------      
- * @author Administrator
+ *      = 256개의 숫자를 표현가능
+ *      = -128 ~ 0 ~ 127 까지 표현가능
+ * ---------------------------------------              
+ *        
+ * @author 304
  *
  */
 public class ByreTest {
 
 	public static void main(String[] args) {
 		// 1. 선언
-		Byte buffer;
+		byte buffer;
 		
 		// 2. 초기화
 		buffer = 0;
 		
-		// 3.tkdyd
+		// 3. 사용 : 출력
 		System.out.println("buffer=" + buffer);
 		
 		// 4. 값을 변경
@@ -30,10 +32,10 @@ public class ByreTest {
 		buffer = -128;
 		System.out.println("buffer=" + buffer);
 		
-		// 6. 값의 범위를 벗어나는 값을 저장하려고 시도
-		//buffer = 129; // 
+		// 5. 값의 범위를 벗어나는 값을 저장하려는 시도
+		// Type mismatch: cannot convert from int to byte
+//		buffer = 128; 
 		
-
 	}
 
 }

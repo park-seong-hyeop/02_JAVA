@@ -23,7 +23,7 @@ public class AccountTest {
 		myAccount = new Account();
 		// (2) 매개변수를 받는 중복정의된 생성자로 초기화
 		yourAccount = new Account(1, 10000);		
-		hisAccount = new Account("2", 30000);
+		hisAccount = new Account(2, 30000);
 		
 		// 3. 사용
 		// (1) 계좌 생성되자 마자 초기 상태 출력

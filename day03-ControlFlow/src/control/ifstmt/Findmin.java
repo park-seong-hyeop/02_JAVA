@@ -17,6 +17,7 @@ public class Findmin {
 			
 			//입력을 알리는 안내 메시지
 			System.out.println("두 정수를 입력(space bar로 분리");
+		
 			// 스케너 사용한 정수 입력(초기화)
 			x = scan.nextInt();
 			y = scan.nextInt();

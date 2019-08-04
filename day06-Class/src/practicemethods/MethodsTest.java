@@ -1,4 +1,4 @@
-package practice.methods.one;
+package practicemethods;
 
 public class MethodsTest {
 
@@ -35,27 +35,3 @@ public class MethodsTest {
 
 }
 
-// 1. var declare of MethodDefinitions
-		MethodDefinitions methods;
-		
-		// 2. var initiation
-		methods = new MethodDefinitions();
-		
-		// 3. 0 method call
-		int result = methods.power(3);
-		System.out.printf
-		   ("method 0 ==> power of %d=%d%n", 3, result);
-
-
-DefineMethods methods = new DefineMethods();
-		
-		int[] multiples = methods.makeMultipleNums(30);
-		for (int multiple: multiples)
-			System.out.println(multiple);
-		
-		
-		String decide = methods.decideSign(4);
-		System.out.println(decide);
-		
-		methods.findMultiple(2);
-}

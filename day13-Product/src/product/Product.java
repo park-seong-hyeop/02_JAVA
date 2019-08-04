@@ -57,7 +57,10 @@ public class Product {
 	 //2.생성자
 	 Product(){
 	 }
-	
+	 /**
+	  * pcode 필드만 초기화하는 생성자
+	  * @param pcode
+	  */	
 	 public Product(String pcode){
 		 this();
 		 this.pcode=pcode;
