@@ -1,3 +1,4 @@
+
 package array.multi;
 
 import java.util.Scanner;
