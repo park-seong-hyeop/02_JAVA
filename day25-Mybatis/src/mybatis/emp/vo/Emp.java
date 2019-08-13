@@ -1,21 +1,22 @@
 package mybatis.emp.vo;
 
 /**
- * EMP 테이블의 컬럼명과 같은 멤버변수 이름을 갖는 멤버변수 이름을 갖는 
+ * EMP 테이블의 컬럼명과 같은 
+ * 멤버변수 이름을 갖는
  * vo 클래스 정의
- * --------------------------------------------
+ * ----------------------------
  * private 멤버변수
  * 기본생성자
  * 접근자/수정자
  * equals & hashCode <== empno 로 작성
  * toString 작성
- * --------------------------------------------
- * @author Administrator
+ * ----------------------------
+ * @author 304
  *
  */
 public class Emp {
 	
-	// 1. 멤버변수
+	// 컬럼 이름과 일치하는 멤버변수 선언
 	private int empno;
 	private String ename;
 	private String job;
@@ -24,11 +25,13 @@ public class Emp {
 	private int sal;
 	private int comm;
 	private int deptno;
-	
+
+	// 기본생성자
 	public Emp() {
 		super();
 	}
-		
+
+	// 각 필드 접근자/수정자
 	public int getEmpno() {
 		return empno;
 	}
@@ -93,6 +96,7 @@ public class Emp {
 		this.deptno = deptno;
 	}
 
+	// equals & hashCode by empno
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -114,13 +118,21 @@ public class Emp {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Emp [empno=" + empno + ", ename=" + ename + ", job=" + job + ", mge=" + mgr + ", hiredate=" + hiredate
-				+ ", sal=" + sal + ", comm=" + comm + ", deptno=" + deptno + "]";
+		return "직원정보 [empno=" + empno + ""
+				+ ", ename=" + ename 
+				+ ", job=" + job 
+				+ ", mgr=" + mgr 
+				+ ", hiredate=" + hiredate
+				+ ", sal=" + sal 
+				+ ", comm=" + comm 
+				+ ", deptno=" + deptno + "]";
 	}
-
+	
+	
+	
 	
 
 }

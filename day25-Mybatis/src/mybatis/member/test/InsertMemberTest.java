@@ -1,10 +1,13 @@
-package mybatis.emp.test;
+package mybatis.member.test;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import mybatis.emp.MybatisClient;
-import mybatis.emp.vo.Emp;
+import mybatis.member.vo.Member;
 
 /**
  * EMP 테이블에
@@ -14,7 +17,7 @@ import mybatis.emp.vo.Emp;
  * @author 304
  *
  */
-public class MybatisEmpInsertTest2 {
+public class InsertMemberTest {
 
 	public static void main(String[] args) {
 		// 1. factory 얻기
@@ -47,17 +50,18 @@ public class MybatisEmpInsertTest2 {
 			// mybatis.emp.mapper.EmpMapper.insert
 			
 			// 입력에 사용할 값이 담기는 맵 객체 생성
-			Emp emp = new Emp();
-			emp.setEmpno(1111);
-			emp.setEname("박준석");
-			emp.setJob("SALESMAN");
+			Member Member = new Member();
+			Member.setMemberId("M001");
+			Member.setMemberName("박성협");
+			Member.setGender("M");
+			Member.setPhone(9155);
 			
 			// DML 수행에 성공한 건수를 리턴 
-			int addCnt = session.insert("mybatis.emp.mapper.EmpMapper.insert2"
-					     , emp);
+			int addCnt = session.insert("mybatis.member.mapper.MemberMapper.insertMember"
+					     , Member);
 			
 			if (addCnt > 0) {
-				System.out.println("직원정보=" + emp);
+				System.out.println("직원정보=" + Member);
 				System.out.printf("%d 행이 삽입되었습니다.%n", addCnt);
 			}
 			
