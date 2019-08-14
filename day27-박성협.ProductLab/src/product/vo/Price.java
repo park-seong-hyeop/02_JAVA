@@ -11,26 +11,36 @@ package product.vo;
  *
  */
 public class Price {
-	// 선언
+	// (1) int min, int max 두 개의 멤버변수를 선언
 	private int min;
 	private int max;
-	// 생성자
-	public Price () {
-		
-	}
 	
+	// (2) 기본생성자 생성
+	public Price() {
+		super();
+	}
+
+	// (3) 접근자, 수정자 생성
 	public int getMin() {
 		return min;
 	}
+
+
 	public void setMin(int min) {
 		this.min = min;
 	}
+
+
 	public int getMax() {
 		return max;
 	}
+
+
 	public void setMax(int max) {
 		this.max = max;
 	}
+	
+	// (4) equals() & hashCode() : 두 값 모두로 작성
 	
 	@Override
 	public int hashCode() {
@@ -56,15 +66,15 @@ public class Price {
 			return false;
 		return true;
 	}
+
+// (5) toString() 작성
+//	 	   : "검색가격[최저가:얼마 ~ 최대가:얼마]" 와 같은 문자열이 출력되도록 작성 
 	
 	@Override
 	public String toString() {
-		return "가격정보 [최저가=" + min + ", 최대가=" + max + ""
-				+ ", getMin()=" + getMin() + ", getMax()=" + getMax()
-				+ ", hashCode()=" + hashCode() + ", getClass()=" + getClass() 
-				+ ", toString()=" + super.toString()
-				+ "]";
+		return "검색가격 [최저가:" + min + ", 최대가:" + max + "]";
 	}
-		
 
+	
+	
 }

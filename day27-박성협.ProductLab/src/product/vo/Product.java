@@ -13,52 +13,77 @@ package product.vo;
  *
  */
 public class Product {
-	//멤버변수
+	// (1) 멤버변수를 선언
 	private String code;
 	private String name;
 	private int price;
 	private int quantity;
-	//기본생성자
+	private String regDate;
+	private String modDate;
+	
+	// (2) 기본생성자 생성
 	public Product() {
-		
+		super();
 	}
-	// 접근자, 수정자
+
+	// (3) 접근자, 수정자 생성
 	public String getCode() {
 		return code;
 	}
+
 	public void setCode(String code) {
 		this.code = code;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public int getPrice() {
 		return price;
 	}
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
 	public int getQuantity() {
 		return quantity;
 	}
+
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
+	public String getRegDate() {
+		return regDate;
+	}
+
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
+	}
+
+	public String getModDate() {
+		return modDate;
+	}
+
+	public void setModDate(String modDate) {
+		this.modDate = modDate;
+	}
 	
-	//equals() & hashCode() : code 변수로 작성
+	// (4) equals() & hashCode() : 두 값 모두로 작성
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((code == null) ? 0 : code.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + price;
-		result = prime * result + quantity;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -73,23 +98,14 @@ public class Product {
 				return false;
 		} else if (!code.equals(other.code))
 			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (price != other.price)
-			return false;
-		if (quantity != other.quantity)
-			return false;
 		return true;
 	}
-	//toString() 작성 
+	
+	// (5) toString() 작성 
 	@Override
 	public String toString() {
-		return "제품정보 [code=" + code + ", name=" + name + ", price=" + price + ", quantity=" + quantity
-				+ ", getCode()=" + getCode() + ", getName()=" + getName() + ", getPrice()=" + getPrice()
-				+ ", getQuantity()=" + getQuantity() + ", hashCode()=" + hashCode() + ", getClass()=" + getClass()
-				+ ", toString()=" + super.toString() + "]";
-	}	
+		return "제품정보 [제품코드=" + code + ", 이름=" + name + ", 가격=" + price + ", 재고수량=" + quantity + ", 등록일="
+				+ regDate + ", 수정일=" + modDate + "]";
+	}
+	
 }
