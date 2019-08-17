@@ -12,6 +12,7 @@ public class SingleResp implements Response {
 	public void response(Object object) {
 		Book book = (Book)object;
 		System.out.println(book);
-	}
+	};
+	
 
 }

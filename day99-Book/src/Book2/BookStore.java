@@ -1,4 +1,4 @@
-package Book1;
+package Book2;
 
 public class BookStore {
 	
