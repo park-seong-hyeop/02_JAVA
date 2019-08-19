@@ -4,7 +4,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import mybatis.emp.MybatisClient;
-import mybatis.emp.vo.Emp;
 
 /**
  * EMP 테이블에서
@@ -14,31 +13,29 @@ import mybatis.emp.vo.Emp;
  * @author Administrator
  *
  */
-public class MybatisEmpDeleteTest2 {
+public class MybatisEmpDeleteTest {
 
 	public static void main(String[] args) {
-		// 1. 펙토리 얻기
+		// 1. 팩토리 얻기
 		SqlSessionFactory factory = MybatisClient.getFactory();
+		
 		// 2. 세션 얻기
 		SqlSession session = factory.openSession(true);
 		
 		try {
 			// 3. 쿼리 실행 및 결과 받기
 			// mybatis.emp.mapper.EmpMapper.delete
-			Emp rmEmp = new Emp();
-					rmEmp.setEmpno(1111);
-			int rmCnt = session.delete("mybatis.emp.mapper.EmpMapper.delete2" , rmEmp);
-			if(rmCnt > 0) {
-				System.out.printf("직원정보 %d 건이 삭제되었습니다. %n", rmCnt);
-			}else {
-				System.out.println("삭제된 정보가 없습니다.");
-			}
+			int rmCnt = session.delete("mybatis.emp.mapper.EmpMapper.delete", 1111);
 			
-		}finally {
-			// 세션 닫기
-			session.close();
+			if (rmCnt >0 ) {
+				System.out.printf("직원정보 %d 건이 삭제되었습니다.", rmCnt);
+			}
+		} finally {
+			// 4. 세션 닫기
+			if (session != null) {
+				session.close();
+			}
 		}
-		
 	}
 
 }

@@ -1,21 +1,21 @@
 package mybatis.emp.test;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import mybatis.emp.MybatisClient;
+import mybatis.emp.vo.Emp;
 
 /**
  * EMP 테이블에서 1건, 전체조회를
  * Mybatis 를 사용하여 실행하는 테스트 클래스
  * 
- * @author 304
+ * @author Administrator
  *
  */
-public class MybatisEmpSelectTest {
+public class MybatisEmpSelectTest2 {
 
 	public static void main(String[] args) {
 		// 1. factory 얻기
@@ -27,24 +27,26 @@ public class MybatisEmpSelectTest {
 		try {
 			// 3. 세션을 통해 쿼리 실행
 			// (1) 전체 조회 쿼리 아이디 : 
-			//     mybatis.emp.mapper.EmpMapper.selectAll
-			List<Map<String, Object>> emps = 
-					session.selectList("mybatis.emp.mapper.EmpMapper.selectAll");
+			//     mybatis.emp.mapper.EmpMapper.selectAll2
+			List<Emp> emps = 
+					session.selectList("mybatis.emp.mapper.EmpMapper.selectAll2");
 			
 			// 조회 결과 foreach 출력
-			for (Map<String, Object> emp: emps) {
-				// 맵의 모든 데이터 출력
-//				System.out.println(emp);
-				// 사번, 이름만 맵에서 추출
-				System.out.println(emp.get("EMPNO") + ", " + emp.get("ENAME"));
+			for (Emp emp: emps) {
+				// Emp 클래스 객체 출력
+				System.out.println(emp);
 			}
 			
 			System.out.println("==============================");
 			
 			// (2) 직원 1명 조회
 			//     mybatis.emp.mapper.EmpMapper.selectEmp
-			Map<String, Object> emp = 
-					session.selectOne("mybatis.emp.mapper.EmpMapper.selectEmp", 8888);
+			// 조회를 위한 객체 생성 : empno 가 들어있는 Emp 타입의 객체
+			Emp inputEmp = new Emp();
+			inputEmp.setEmpno(8888);
+			
+			Emp emp = session.selectOne("mybatis.emp.mapper"
+							        + ".EmpMapper.selectEmp2", inputEmp);
 			
 			// 직원 1명 결과 출력
 			System.out.println(emp);
