@@ -58,40 +58,68 @@ public class Hat {
 		}
 		
 		// 메소드
-		/***
-		 *   1. public voi discount(int amount) : 
-     	 *		amount 만큼 할인한 가격을 리턴.
-     	 *		원래 가격보다 큰 값 할인은 불가능하도록 설정.
-     	 *		할인가가 원래 제품가격보다 크면 "제품 가격보다 크게 할인할 수 없습니다." 내용 출력
-         *
-  		 *	 2. public void dye(String color) : 모자 색상을 입력된 color 로 염색하여 색상을 변경
-         *
-  		 *	 3. public int sell(int amount) : amount 만큼 판매(재고를 줄임). 
-  		 *	         원래 수량보다 많이 판매 불가
-         *
-  		 *	 4. public int buy(int amount) : amount 만큼 구매(재고를 늘림)
+		/**
+		 *  할인 가격을 입력하면 입력한만큼 할인해주는 메소드
+		 *  단 제품가격보다 할인해줄수은 없음  
 		 * @param amount
 		 */
-		public void discount(int amount) {
+		public double discount(int amount) {
 			
+			//선언
+			double result = price;
+			
+			//로직
+			if(this.price - amount >= 0) {
+				result = price - 0;
+			} else {
+				System.out.println("제품 가격보다 크게 할인할 수 없습니다.");
+			}
+			// 리턴
+			return price;
 		}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		
+		/***
+		 * 모자의 색을 염색하는 메소드
+		 * @param color
+		 */
+		public void dye(String color) {
+			
+			this.color = color;
+		}
 		
+		/***
+		 * 모자를 판매시 수량을 줄이는 메소드
+		 * 0보다 작아질수는 없음
+		 * @param amount
+		 * @return
+		 */
+		public int sell(int amount) {
+			
+			//로직
+			if(this.quantity  - amount >= 0) {
+			   this.quantity -= amount;	
+			} else {
+				System.out.println("보유 재고 수량이 부족합니다.");
+			}
+			
+			//리턴
+			return quantity;
+		}
 		
-		
-		
-		
-		
+		/***
+		 * 모자를 추가하여 재고를 늘리는 메소드
+		 * @param amount
+		 * @return
+		 */
+		public int buy (int amount) {
+			
+			//로직
+			quantity += amount;
+			
+			//리턴
+			return quantity;
+		}
+
 		// 접근자, 수정자
 		public String getHatID() {
 			return hatID;
@@ -187,14 +215,14 @@ public class Hat {
 		// toString 재정의
 		@Override
 		public String toString() {
-			return "Hat [hatID=" + hatID + 
-				 ", type=" + type + 
-				 ", material=" + material + 
-				 ", size=" + size + 
-				 ", color="	+ color + 
-				 ", price=" + price + 
-				 ", quantity=" + quantity + 
-				 ", gender=" + gender + 
+			return "모자 정보 [보자 번호=" + hatID + 
+				 ", 종류=" + type + 
+				 ", 재질=" + material + 
+				 ", 크기=" + size + 
+				 ", 색="	+ color + 
+				 ", 가격=" + price + 
+				 ", 수량=" + quantity + 
+				 ", 성별=" + gender + 
 				 "]";
 		}
 
