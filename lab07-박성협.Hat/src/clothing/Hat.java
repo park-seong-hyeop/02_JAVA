@@ -70,7 +70,7 @@ public class Hat {
 			
 			//로직
 			if(this.price - amount >= 0) {
-				result = price - 0;
+				 price = price - amount;
 			} else {
 				System.out.println("제품 가격보다 크게 할인할 수 없습니다.");
 			}

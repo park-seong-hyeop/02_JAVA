@@ -24,6 +24,7 @@ public class HatTest {
 		// 출력
 		for(Hat hat : hats) {
 			System.out.println(hat);
+			System.out.println(hat.discount(3000));
 		}
 	
 
